@@ -1,11 +1,11 @@
-# CloudbeaverTool
-A Tool for Expanding Cloudbeaver Database Drivers
+# CloudbeaverTool-OpenGauss
+A Tool for Expanding OpenGauss Driver to Cloudbeaver. 
 
 在AddNewDrivers文件夹下有几个文件，分别作用如下：
-- drivers:存放驱动文件，每种数据库驱动放在对应id的文件夹下，注意id要保证唯一
-- icons:存放数据库图标
-- AddNewDrivers.py:扩展数据库脚本
-- drivers_plugins.csv:数据库连接基本信息
+- drivers: 存放驱动文件，每种数据库驱动放在对应id的文件夹下，注意id要保证唯一
+- icons: 存放数据库图标
+- AddNewDrivers.py: 扩展数据库脚本
+- drivers_plugins.csv: 数据库连接基本信息
   
   - id:数据库唯一id，与drivers下文件夹名称对应
   - label:数据库名称，在cloudbeaver添加数据库时显示
