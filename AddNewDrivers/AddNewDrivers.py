@@ -126,14 +126,14 @@ if __name__ == '__main__':
     pull = args.pull+""
     if pull == "true" or pull == "t":
         try:
-            oldImage = client.images.get("dbeaver/cloudbeaver:latest")
+            oldImage = client.images.get("dbeaver/cloudbeaver:23.2.5")
             oldImage.remove()
         except:
             pass
 
         try:
             print("正在拉取最新镜像")
-            client.images.pull("dbeaver/cloudbeaver:latest")
+            client.images.pull("dbeaver/cloudbeaver:23.2.5")
             print("最新镜像拉取完毕")
         except:
             raise Exception("最新镜像拉取失败")
@@ -142,12 +142,12 @@ if __name__ == '__main__':
 
     # 运行镜像前先判断是否有
     try:
-        cloudbeaverImage = client.images.get("dbeaver/cloudbeaver:latest")
+        cloudbeaverImage = client.images.get("dbeaver/cloudbeaver:23.2.5")
     except:
         raise Exception("未找到cloudbeaver镜像")
 
     # 运行新的cloudbeaver镜像
-    container = client.containers.run("dbeaver/cloudbeaver:latest",  # image_name 是我们docker镜像的name, REPOSITORY:TAG
+    container = client.containers.run("dbeaver/cloudbeaver:23.2.5",  # image_name 是我们docker镜像的name, REPOSITORY:TAG
                                       name="cloudbeaver",  # 容器name
                                       detach=True,  # detach=True,是docker run -d 后台运行容器
                                       remove=True,  # 容器如果stop了，会自动删除容器
