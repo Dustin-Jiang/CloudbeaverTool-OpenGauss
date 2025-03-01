@@ -31,8 +31,8 @@ jobs:
 
       - name: Save Docker Image
         run: |
-          docker commit cloudbeaver ghcr.io/${{ github.repository_owner }}/my-custom-image:latest
+          docker commit cloudbeaver ghcr.io/dustin-jiang/cloudbeaver-opengauss:latest
 
       - name: Push Docker Image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/my-custom-image:latest
+          docker push ghcr.io/dustin-jiang/cloudbeaver-opengauss:latest
