@@ -19,7 +19,7 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Pull latest Cloudbeaver Image
-        run: docker pull dbeaver/cloudbeaver:latest
+        run: docker pull dbeaver/cloudbeaver:23.2.5
 
       - name: Install Python dependencies
         run: |
