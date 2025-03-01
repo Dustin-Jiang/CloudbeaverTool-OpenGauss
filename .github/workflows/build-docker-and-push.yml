@@ -31,7 +31,7 @@ jobs:
 
       - name: Save Docker Image
         run: |
-          docker commit cloudbeaver ghcr.io/${{ github.repository_owner }}/my-custom-image:latest .
+          docker commit cloudbeaver ghcr.io/${{ github.repository_owner }}/my-custom-image:latest
 
       - name: Push Docker Image
         run: |
