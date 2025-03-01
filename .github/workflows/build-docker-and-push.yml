@@ -21,6 +21,10 @@ jobs:
       - name: Pull latest Cloudbeaver Image
         run: docker pull dbeaver/cloudbeaver:latest
 
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip && pip install -r requirements.txt
+
       - name: Run Python script
         run: |
           cd ./AddNewDrivers && python ./AddNewDrivers.py 
